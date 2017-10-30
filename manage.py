@@ -12,7 +12,7 @@ manager.add_command('db',MigrateCommand)
 manager.add_command('server',Server)
 @manager.shell
 def make_shell_context():
-    return dict(app=app,db=db,User=User)
+    return dict(app=app,db=db,User=User,Pitch=Pitch,Comment=Comment)
 @manager.command
 def test():
     import unittest
