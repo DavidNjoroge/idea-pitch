@@ -5,6 +5,8 @@ class Config:
     '''
     General configurations
     '''
+    SECRET_KEY=os.environ.get('SECRET_KEY')
+
 
 class ProdConfig(Config):
     '''
