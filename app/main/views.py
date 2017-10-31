@@ -4,6 +4,9 @@ from ..models import Comment,User,Pitch,Category
 from .. import db
 from .forms import NewPitch
 
+from flask_login import login_required,login_user,current_user
+
+
 @main.route('/')
 def index():
     '''
@@ -13,6 +16,7 @@ def index():
     return render_template('index.html',categories=categories)
 
 @main.route('/new-pitch',methods = ['GET', 'POST'])
+@login_required
 def new_pitch():
     '''
     view function for creating a new pitch
@@ -24,11 +28,11 @@ def new_pitch():
         body=form.body.data
         print (body)
         category=form.category.data
-        print (category)
-        user='david'
-        new_pitch=Pitch(header=title,body=body,category=category)
+        print (current_user)
+        # user='david'
+        new_pitch=Pitch(header=title,body=body,category=category,user=current_user)
         print (',.,.,><><><><>,.,.<><><><><')
         new_pitch.save_pitch()
-        return render_template('main.index',form=form)
+        return render_template('index.html',form=form)
 
     return render_template('new-pitch.html',form=form)

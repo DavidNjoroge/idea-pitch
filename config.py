@@ -27,7 +27,7 @@ class DevConfig(Config):
     args:
         config: the parent class
     '''
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://chutha:chutha@localhost/pitchideas'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://chutha:chutha@localhost/ideas'
 
     DEBUG = True
 
