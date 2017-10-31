@@ -18,7 +18,7 @@ class User(UserMixin,db.Model):
     email=db.Column(db.String(255))
     # bio=db.Column(db.String(255))
     pass_secure=db.Column(db.String(255))
-    pitches=db.relationship('Pitch',backref='user',lazy='dynamic')
+    # pitches=db.relationship('Pitch',backref='user',lazy='dynamic')
 
 
     @property
@@ -44,7 +44,9 @@ class Pitch(db.Model):
     body=db.Column(db.String(255))
     category=db.Column(db.String(255))
     # time=db.Column(db.DateTime,default=datetime.utcnow)
-    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    # user_id=db.Column(db.Integer,db.ForeignKey('users.id')
+    user=db.Column(db.String(255))
+
 
     def save_pitch(self):
         db.session.add(self)
@@ -68,8 +70,8 @@ class Comment(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     body=db.Column(db.String(255))
     time=db.Column(db.DateTime,default=datetime.utcnow)
-    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
-    pitch_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    # user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    # pitch_id=db.Column(db.Integer,db.ForeignKey('users.id'))
 
     def save_comment(self):
         db.session.add(self)

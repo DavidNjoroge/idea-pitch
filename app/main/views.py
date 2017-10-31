@@ -26,9 +26,9 @@ def new_pitch():
         category=form.category.data
         print (category)
         user='david'
-        new_pitch=Pitch(header=title,body=body,category=category,user=user)
+        new_pitch=Pitch(header=title,body=body,category=category)
         print (',.,.,><><><><>,.,.<><><><><')
         new_pitch.save_pitch()
-        return render_template('index.html',form=form)
+        return render_template('main.index',form=form)
 
     return render_template('new-pitch.html',form=form)
