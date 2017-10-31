@@ -13,7 +13,8 @@ def index():
     view function for the landing page
     '''
     categories=Category.query.all()
-    return render_template('index.html',categories=categories)
+    pitches=Pitch.query.all()
+    return render_template('index.html',categories=categories,pitches=pitches)
 
 @main.route('/new-pitch',methods = ['GET', 'POST'])
 @login_required

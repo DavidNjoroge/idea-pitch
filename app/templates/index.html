@@ -19,12 +19,12 @@
     <div class="col-md-10">
       <!-- <span><button class="btn" name="button">Start Pitching</button></span> -->
       <a class="btn btn-info" href="/new-pitch">Start Pitching</a>
-      <h3>Latest</h3>
+      <h3>Latest</h3> {% for pitch in pitches %}
+
       <div class="">
         <div class="">
-          <p><strong>how to pick up girls</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><strong>{{pitch.header}}</strong></p>
+          <p>{{pitch.body}}</p>
 
         </div>
         <table style="width:100%">
@@ -37,57 +37,7 @@
           </tr>
         </table>
       </div>
-      <div class="">
-        <div class="">
-          <p><strong>how to pick up girls</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <table style="width:100%">
-          <tr>
-            <th>category: pickup</th>
-            <th>author: toel</th>
-            <th>reviews:10</th>
-            <th></th>
-
-          </tr>
-        </table>
-      </div>
-      <div class="">
-        <div class="">
-          <p><strong>how to pick up girls</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <table style="width:100%">
-          <tr>
-            <th>category: pickup</th>
-            <th>author: toel</th>
-            <th>reviews:10</th>
-            <th></th>
-
-          </tr>
-        </table>
-      </div>
-      <div class="">
-        <div class="">
-          <p><strong>how to pick up girls</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-        <table style="width:100%">
-          <tr>
-            <th>category: pickup</th>
-            <th>author: toel</th>
-            <th>reviews:10</th>
-            <th></th>
-
-          </tr>
-        </table>
-      </div>
+      {% endfor %}
 
     </div>
   </div>

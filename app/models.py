@@ -59,7 +59,7 @@ class Pitch(db.Model):
         db.session.commit()
 
     def get_all_pitches(self):
-        pitches=Pitch.query.filter_by().all()
+        pitches=Pitch.query.all()
         return pitches
 
     @classmethod
