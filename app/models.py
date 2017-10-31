@@ -19,6 +19,10 @@ class User(db.Model):
     # @password.setter
     # def password(self,password):
     #     self.pass_secure=generate_password
+    def __repr__(self):
+        return f'User {self.username}'
+
+
 class Pitch(db.Model):
     __tablename__='pitches'
 
@@ -41,8 +45,10 @@ class Pitch(db.Model):
     def get_pitches(cls,id):
         pitches=Pitch.query.filter_by(user_Id=id)
         return pitches
+    def __repr__(self):
+        return f'User {self.username}'
 
-@classmethod
+# @classmethod
 class Comment(db.Model):
     __tablename__='comments'
 
@@ -60,3 +66,23 @@ class Comment(db.Model):
     def get_comments(cls,id):
         comments=Comment.query.filter_by(user_Id=id)
         return comments
+
+    def __repr__(self):
+        return f'User {self.username}'
+
+# @classmethod
+class Category(db.Model):
+    __tablename__='categories'
+
+    id=db.Column(db.Integer,primary_key=True)
+    name=db.Column(db.String(255))
+    # def save_category(self):
+    #     db.session.add(self)
+    #     db.session.commit()
+    #
+    def get_categories(self):
+
+        return
+
+    def __repr__(self):
+        return f'User {self.name}'

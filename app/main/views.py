@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
-from ..models import Comment,User,Pitch
+from ..models import Comment,User,Pitch,Category
 from .. import db
 
 @main.route('/')
@@ -8,4 +8,5 @@ def index():
     '''
     view funciton for the landing page
     '''
-    return render_template('index.html')
+    categories=Category.query.all()
+    return render_template('index.html',categories=categories)
