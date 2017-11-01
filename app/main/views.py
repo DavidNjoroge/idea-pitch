@@ -3,7 +3,6 @@ from . import main
 from ..models import Comment,User,Pitch,Category
 from .. import db
 from .forms import NewPitch,NewComment
-
 from flask_login import login_required,login_user,current_user
 
 
@@ -29,8 +28,8 @@ def new_pitch():
         body=form.body.data
         # print (body)
         category=form.category.data
-        print (current_user)
-        print (',.,.,><><><><>,.,.<><><><><')
+        # print (current_user)
+        # print (',.,.,><><><><>,.,.<><><><><')
         # user='david'
         new_pitch=Pitch(header=title,body=body,category=category,user=current_user)
         new_pitch.save_pitch()
