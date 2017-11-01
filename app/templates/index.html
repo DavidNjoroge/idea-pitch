@@ -23,14 +23,15 @@
 
       <div class="">
         <div class="">
-          <p><strong>{{pitch.header}}</strong></p>
+          <a href="/pitch/{{pitch.id}}"><strong>{{pitch.header}}</strong></a>
+          <p></p>
           <p>{{pitch.body}}</p>
 
         </div>
         <table style="width:100%">
           <tr>
-            <th>category: pickup</th>
-            <th>author: toel</th>
+            <th>category: {{pitch.category}}</th>
+            <th>author: {{pitch.user.username}}</th>
             <th>reviews:10</th>
             <th></th>
 

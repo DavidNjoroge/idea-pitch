@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+
+
+<div class="container">
+  <div class="">
+    <h2>{{pitch.header}}</h2>
+    <p>{{pitch.body}}</p>
+    <table style="width:100%">
+      <tr>
+        <th>category: {{pitch.category}}</th>
+        <th>author: {{pitch.category}}</th>
+        <th></th>
+        <th><button type="button" class="btn" name="button"> comment </button></th>
+
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="container">
+  <h2>COmments</h2>
+  <div class="">
+    <p>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  </div>
+  <table style="width:100%">
+    <tr>
+      <th>By: toel</th>
+      <!-- <th>category: pickup</th> -->
+      <th> date: 12/12/12 15:00 </th>
+      <th>vote:<button type="button" class="btn btn-default">
+  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+</button></th>
+
+    </tr>
+  </table>
+
+</div>
+
+{% endblock %}

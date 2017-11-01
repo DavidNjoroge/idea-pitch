@@ -25,15 +25,21 @@ def new_pitch():
     form=NewPitch()
     if form.validate_on_submit():
         title=form.title.data
-        print (title)
+        # print (title)
         body=form.body.data
-        print (body)
+        # print (body)
         category=form.category.data
-        print (current_user)
+        # print (current_user)
         # user='david'
         new_pitch=Pitch(header=title,body=body,category=category,user=current_user)
-        print (',.,.,><><><><>,.,.<><><><><')
+        # print (',.,.,><><><><>,.,.<><><><><')
         new_pitch.save_pitch()
         return render_template('index.html',form=form)
 
     return render_template('new-pitch.html',form=form)
+
+@main.route('/pitch/<int:id>')
+def pitch(id):
+    pitch=Pitch.query.get(id)
+
+    return render_template('pitch.html',pitch=pitch)
