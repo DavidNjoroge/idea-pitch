@@ -10,3 +10,9 @@ class NewPitch(FlaskForm):
         # language = SelectField('Languages', choices = [('cpp', 'C++'),('py', 'Python')])
     body=TextAreaField('The Idea',validators=[Required()])
     submit=SubmitField('Submit')
+
+
+class NewComment(FlaskForm):
+    # title=StringField('Pitch Title',validators=[Required()])
+    body=TextAreaField('The Idea',validators=[Required()])
+    submit=SubmitField('Submit')
